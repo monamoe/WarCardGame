@@ -1,4 +1,4 @@
-package content;
+package wargame;
 
 import java.util.ArrayList;
 import java.util.Collections;

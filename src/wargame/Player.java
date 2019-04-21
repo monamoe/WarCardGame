@@ -3,7 +3,7 @@
  * Students can modify and extend to implement their game.
  * Add your name as a modifier and the date!
  */
-package content;
+package wargame;
 
 /**
  * A class that models each Player in the game. Players have an identifier,

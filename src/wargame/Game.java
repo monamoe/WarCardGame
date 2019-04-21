@@ -1,7 +1,4 @@
-package content;
-
-import panes.*;
-import wargame.*;
+package wargame;
 
 /**
  *
@@ -26,6 +23,7 @@ public class Game {
             loser.hand.remove(0);
         }
         winner.shuffle();
+        loser.shuffle();
     }
 
     //finds out which card is worth more.
@@ -126,12 +124,12 @@ public class Game {
 
     //checks to see if there is a winner for the game
     public static void declareWinner() {
-        if (player1.getSize() > 0) {
+        if (player1.hand.size() > 0) {
+            gameOverPage.updateLabel();
             WarGame.changeScene("winner");
-            gameOverPage.winnerLabel.setText(Game.player1.getPlayerID() + " wins!");
-        } else if (player2.getSize() > 0) {
+        } else if (player2.hand.size() > 0) {
+            gameOverPage.updateLabel();
             WarGame.changeScene("winner");
-            gameOverPage.winnerLabel.setText(Game.player2.getPlayerID() + " wins!");
         }
     }
 
